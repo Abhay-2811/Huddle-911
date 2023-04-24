@@ -1,5 +1,6 @@
 nav{
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     /* position: relative; */
@@ -7,19 +8,52 @@ nav{
     z-index: 99;
     padding: 10px 20px;
     box-shadow: 0px 1px 5px black;
+
 }
     
 .menu-list{
     /* list-style-type:none; */
     display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     justify-content: space-between;
     align-items:center;
-    margin-right: 20px;
-    
+    float: none;
+    transform: translate(-50%, -50%);
+
     /* background-color: aqua; */
 }
 
-ul{
+
+
+.menu-list ul{
     padding: 10px;
+    font-size:large;
+    font-weight: 600;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* justify-content: space-between; */
+
+}
+
+.menu-list a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    color: rgb(11, 83, 238);
+}
+
+.menu-list a:hover{
+    transform: scale(1.08);
+}
+
+
+.menu-list a.active{
+    color: black;
+}
+.logo{
+    display: flex;
+    height: 90px;
+    justify-content: center;
+    padding-top: 8px;
 }

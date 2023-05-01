@@ -1,0 +1,56 @@
+.button-container{
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+
+}
+
+.button-container button{
+    background-color: rgb(11, 83, 238);
+    height: 50px;
+    width: 200px;
+    font-weight: 900;
+    font-size:x-large;
+    font-variant: small-caps;
+    text-decoration: solid;
+    color: azure;
+    border-radius: 16px;
+    border-style: outset;
+    padding: 10px;
+    position: absolute;
+    left: 43%;
+    top: 50%;
+}
+
+.button-container h2{
+    text-align: center;
+}
+
+.video-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    grid-row:auto;    
+    columns: 2;
+    
+}
+
+video{
+    width: 300px;
+    border:2px solid rgb(11, 83, 238);
+
+}
+
+.vid1{
+    grid-column: 1;
+    border: 2px solid blue;
+    padding: 10px;
+    width: 700px;
+}
+
+.vid2{
+    grid-column: 2;
+    border: 2px solid blue;
+    padding: 10px;
+}

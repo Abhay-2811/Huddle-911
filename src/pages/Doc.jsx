@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import lighthouse from '@lighthouse-web3/sdk'
 import { Polybase } from "@polybase/client";
 import { ethers } from "ethers";
-import {Axios} from 'axios'
+import {Axios} from 'axios';
+import './doc.css';
 
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
@@ -56,7 +57,8 @@ const Doc = ()=>{
     },[])
     
     return(
-        <form onSubmit={handleSubmit}>
+      <div className="container">
+        <form onSubmit={handleSubmit} className="Docform">
             <input type="text" placeholder="Name" onChange={(e)=>{setName(e.target.value)}}/>
             <input type="text" placeholder="speciality" onChange={(e)=>{setSpec(e.target.value)}}/>
             <input type="number" placeholder="CPH" onChange={(e)=>{setCph(e.target.value)}}/>
@@ -65,8 +67,9 @@ const Doc = ()=>{
                 e.preventDefault();
                 uploadFile(e);
                 }}/>
-            <button type="submit">submit</button>
+            <button type="submit" className="submitButton">submit</button>
         </form>
+        </div>
     )
 }
 

@@ -1,0 +1,39 @@
+.doc-container{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    border: 2px solid black;
+    padding: 30px;
+    margin: 5%;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.doc-container a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.doc-container h1{
+    text-decoration: none;
+    width: 50px;
+    padding-right: 30px;
+}
+
+.doc-container p{
+    width: 140px;
+    font-size: large;
+}
+.doc-container button{
+    background-color: rgb(11, 83, 238);
+    height: 50px;
+    width: 200px;
+    font-weight: 900;
+    font-size:large;
+    font-variant: small-caps;
+    text-decoration: solid;
+    color: azure;
+    border-radius: 16px;
+    border-style: outset;
+}

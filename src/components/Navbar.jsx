@@ -16,7 +16,7 @@ export default function Navbar () {
           <ul><NavLink exact to='/addDoc'>Become Affiliated Huddle-911 Doctor</NavLink></ul>
           </div>
           
-          <ConnectButton chainStatus="icon" />
+          <ConnectButton chainStatus="icon" showBalance={false}/>
     </nav>
   )
 }

@@ -1,0 +1,52 @@
+.Docform{
+    display:flex;
+    flex-direction: column;
+    padding: 20px 0 20px 0px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10%;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #2d2b2b 0%, black 100%);
+}
+
+.Docform input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    box-shadow: 20px;
+  }
+
+.Docform input:focus {
+    border: 3px solid #ffe7e7;
+}
+
+.Docform input[type=file]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    box-shadow: 20px;
+    /* background-color: #e5e5e5; */
+    
+}
+
+.container {
+    border-radius: 3px;
+    padding: 30px;
+    max-width: 39em;
+    margin: 3em auto;
+    
+  }
+
+.submitButton{
+    display: inline;
+    width: 70px;
+    height: 30px;
+    justify-content: center;
+    margin-top: 30px;
+    border-radius: 5px;
+}

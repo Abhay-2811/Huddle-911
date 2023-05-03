@@ -70,7 +70,7 @@ const Consult = () => {
       .then(async res => {
         const room = res.data.data.roomId
         const meetLinkMsg =
-          '"http://localhost:3000/meet?id=' + room + '&date=' + date.toISOString()+"\". At "+date.toString()
+          `"${window.location.origin}/meet?id=` + room + '&date=' + date.toISOString()+"\". At "+date.toString()
         await Db_appointments.create([currentAdd, doc_add, meetLinkMsg, date.toISOString()])
         await ScheduleMeet(doc_add, currentAdd, meetLinkMsg)
       })

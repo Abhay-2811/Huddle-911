@@ -111,7 +111,7 @@ const Meet = () => {
     if (doctor === window.ethereum.selectedAddress) {
       console.log(doctor, customer)
     }
-    // await Doc_claim(doctor, customer).then(async () => {
+    await Doc_claim(doctor, customer).then(async () => {
       console.log('sending notification')
       await PushAPI.payloads.sendNotification({
         signer: signer,
@@ -119,11 +119,11 @@ const Meet = () => {
         identityType: PushAPI.payloads.IDENTITY_TYPE.DIRECT_PAYLOAD, // direct payload
         notification: {
           title: `Update Docs for client ${customer}:`,
-          body: `Go to link : "http://localhost:3000/submitReport?id=${dateParam}"`
+          body: `Go to link : "${window.location.origin}/submitReport?id=${dateParam}"`
         },
         payload: {
           title: `Update Docs for client ${customer}:`,
-          body: `Go to link : "http://localhost:3000/submitReport?id=${dateParam}"`,
+          body: `Go to link : "${window.location.origin}/submitReport?id=${dateParam}"`,
           cta: '',
           img: ''
         },
@@ -132,7 +132,7 @@ const Meet = () => {
         env: 'staging'
       })
     })
-  // })
+  })
 
   useEffect(() => {
     console.log(meId);

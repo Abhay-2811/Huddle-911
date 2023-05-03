@@ -9,8 +9,10 @@ const Notifications = () => {
 
     useEffect(()=>{
         const getNotifications = async ()=>{
+            const curr_add = window.ethereum.selectedAddress
+            const CAIP = `eip155:80001:${curr_add}`
             const spams = await PushAPI.user.getFeeds({
-                user: 'eip155:80001:0x63DAc31bF8c2C972903f2bc303a502587268954d', // user address in CAIP
+                user: CAIP, // user address in CAIP
                 env: 'staging'
               }).then((response)=>{
                 setNotif(response);
@@ -20,8 +22,8 @@ const Notifications = () => {
         getNotifications();
     },[])
   return(
-    <div className='container'>
-        <h1>Notifications</h1>
+    <div className='notif-container'>
+        <h1>Notifications</h1><span>By - Push Protocol</span>
         {notif?.map((oneNotification, i) => {
     const { 
         cta,

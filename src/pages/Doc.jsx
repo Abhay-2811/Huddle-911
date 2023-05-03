@@ -57,8 +57,8 @@ const Doc = ()=>{
     },[])
     
     return(
-      <div className="container">
-        <form onSubmit={handleSubmit} className="Docform">
+      <div className="create-doc-container">
+        <form onSubmit={handleSubmit} >
             <input type="text" placeholder="Name" onChange={(e)=>{setName(e.target.value)}}/>
             <input type="text" placeholder="speciality" onChange={(e)=>{setSpec(e.target.value)}}/>
             <input type="number" placeholder="CPH" onChange={(e)=>{setCph(e.target.value)}}/>

@@ -1,8 +1,9 @@
+
 .button-container{
     align-items: center;
     justify-content: space-between;
-    padding-top: 50px;
-
+    padding-top: 100px;
+    line-height: 30px;
 }
 
 .button-container button{
@@ -17,7 +18,7 @@
     border-radius: 16px;
     border-style: outset;
     padding: 10px;
-    position: absolute;
+    position: relative;
     left: 43%;
     top: 50%;
 }
@@ -36,21 +37,72 @@
     
 }
 
-video{
-    width: 300px;
-    border:2px solid rgb(11, 83, 238);
-
-}
-
-.vid1{
-    grid-column: 1;
-    border: 2px solid blue;
-    padding: 10px;
-    width: 700px;
-}
-
 .vid2{
-    grid-column: 2;
-    border: 2px solid blue;
+    border: 2px solid black;
+}
+.room-not-joined{
+    margin: 5% 34%;
+}
+
+.room-not-joined video{
+    width: 500px;
+    box-shadow: 2px 2px rgb(66, 66, 248);
+    border: 2px solid black;
+}
+.room-not-joined button{
+    background-color: rgb(11, 83, 238);
+    height: 50px;
+    width: 200px;
+    font-weight: 900;
+    font-size:x-large;
+    font-variant: small-caps;
+    text-decoration: solid;
+    color: azure;
+    border-radius: 16px;
+    border-style: outset;
     padding: 10px;
+    margin-top: 30px;
+    position: relative;
+    left: 34%
+}
+
+.room-not-joined h2{
+    left: 40%;
+    padding-left: 60px;
+}
+
+.room-joined{
+    margin: 5% 34%;
+}
+
+.peer-video {
+    position: relative;
+    width: 500px;
+    box-shadow: 2px 2px rgb(66, 66, 248);
+    border: 2px solid black;
+
+}
+.room-joined button{
+    background-color: rgb(11, 83, 238);
+    height: 50px;
+    width: 200px;
+    font-weight: 900;
+    font-size:x-large;
+    font-variant: small-caps;
+    text-decoration: solid;
+    color: azure;
+    border-radius: 16px;
+    border-style: outset;
+    padding: 10px;
+    margin-top: 30px;
+    position: relative;
+    margin-right: 28%;
+    height: fit-content;
+    white-space:nowrap;
+    bottom: 0%;
+}
+
+.button-box{
+    display: flex; 
+    margin-right: 80%;
 }

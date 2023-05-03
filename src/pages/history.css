@@ -1,11 +1,8 @@
-.notif-container{
-    display:flex;
-    flex-direction: column;
+.history-container{
+    display:block;
     border: 2px solid black;
     padding: 30px;
     margin: 5%;
-    margin-left: 12%;
-    width: 70%;
     border-radius: 8px;
     background: rgba(0, 138, 236, 0.34);
     border-radius: 16px;
@@ -13,4 +10,13 @@
     backdrop-filter: blur(11.2px);
     -webkit-backdrop-filter: blur(11.2px);
     border: 2px solid rgba(1, 55, 93, 0.3);
+    font-size:large;
+    line-height: 40px;
+}
+
+.history-container a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
 }

@@ -1,7 +1,8 @@
-.notif-container{
+.sr-container{
     display:flex;
     flex-direction: column;
     border: 2px solid black;
+    justify-content:space-between;
     padding: 30px;
     margin: 5%;
     margin-left: 12%;
@@ -13,4 +14,15 @@
     backdrop-filter: blur(11.2px);
     -webkit-backdrop-filter: blur(11.2px);
     border: 2px solid rgba(1, 55, 93, 0.3);
+}
+
+.sr-container input{
+    padding: 10px;
+}
+
+.sr-container button{
+    margin-top: 20px;
+    font-size: larger;
+    background-color: transparent;
+    border-radius: 13px;
 }

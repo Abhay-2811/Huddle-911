@@ -1,3 +1,8 @@
+body{
+    backdrop-filter: blur(4px);
+    background-color: aliceblue;
+}
+
 .doc-container{
     display:flex;
     flex-direction: row;
@@ -7,12 +12,18 @@
     margin: 5%;
     align-items: center;
     border-radius: 8px;
+    background: rgba(0, 138, 236, 0.34);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.2px);
+    -webkit-backdrop-filter: blur(11.2px);
+    border: 2px solid rgba(1, 55, 93, 0.3);
 }
 
 .doc-container a{
-    text-decoration: none;
     font-weight: 500;
-    font-size: medium;
+    font-size: 20px;
+    color: black;
 }
 
 .doc-container h1{

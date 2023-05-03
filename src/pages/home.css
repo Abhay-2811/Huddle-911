@@ -1,0 +1,37 @@
+body{
+    background-color: aliceblue;
+    background-image: url(../../public/home-bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 80%;
+    padding: 20px;
+    backdrop-filter: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.text-container{
+    padding: 20px;
+    padding-top: 30px;
+
+}
+.text-container h1{
+    margin-bottom: 50px;
+    /* font-variant: small-caps; */
+    font-size: 50px;
+    width: fit-content;
+    font-family: sans-serif;
+}
+
+.text-container p{
+    font-size: 25px;
+}
+
+.footer{
+    margin-top: 5%;
+    margin-left: 30%;
+    position: absolute;
+    text-align: center;
+    font-weight: 600;
+    font-size: large;
+    line-height: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

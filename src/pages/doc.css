@@ -1,17 +1,7 @@
-.Docform{
-    display:flex;
-    flex-direction: column;
-    padding: 20px 0 20px 0px;
-    align-items: center;
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 10%;
-    overflow: hidden;
-    background-image: linear-gradient(to right, #2d2b2b 0%, black 100%);
-}
 
-.Docform input {
-    width: 50%;
+
+.create-doc-container input {
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -19,27 +9,43 @@
     box-shadow: 20px;
   }
 
-.Docform input:focus {
+.create-doc-container input:focus {
     border: 3px solid #ffe7e7;
 }
 
-.Docform input[type=file]{
-    width: 50%;
+.create-doc-container input[type=file]{
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid black;
     box-shadow: 20px;
     /* background-color: #e5e5e5; */
-    
 }
 
-.container {
-    border-radius: 3px;
+.create-doc-container {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    border: 2px solid black;
     padding: 30px;
-    max-width: 39em;
-    margin: 3em auto;
-    
+    margin-left: 30%;
+    margin-top: 7%;
+    align-items: center;
+    border-radius: 8px;
+    background: rgba(0, 138, 236, 0.34);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.2px);
+    -webkit-backdrop-filter: blur(11.2px);
+    border: 2px solid rgba(1, 55, 93, 0.3);
+    width: 30%;
+  }
+
+  .create-doc-container form{
+    display: flex;
+    flex-direction: column;
   }
 
 .submitButton{

@@ -118,7 +118,7 @@ const Consult = () => {
             Hourly Cost: <br /> <b> {doctor.data['CPH']} MATIC</b>
           </p>
           <a href={doctor.data['certification']} target='_blank'>
-            view certificate
+            View Certificate
           </a>
           <br />
           <Popup

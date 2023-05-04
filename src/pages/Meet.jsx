@@ -4,7 +4,7 @@ import { ethers } from 'ethers'
 import { contractABI, contractAdd } from '../constants/contract'
 import './meet.css'
 import CountdownTimer from '../components/Timer'
-import * as PushAPI from '@pushprotocol/restapi'
+// import * as PushAPI from '@pushprotocol/restapi'
 
 import { useHuddle01, useEventListener } from '@huddle01/react'
 import {
@@ -113,24 +113,24 @@ const Meet = () => {
     }
     await Doc_claim(doctor, customer).then(async () => {
       console.log('sending notification')
-      await PushAPI.payloads.sendNotification({
-        signer: signer,
-        type: PushAPI.payloads.NOTIFICATION_TYPE.TARGETTED, // target
-        identityType: PushAPI.payloads.IDENTITY_TYPE.DIRECT_PAYLOAD, // direct payload
-        notification: {
-          title: `Update Docs for client ${customer}:`,
-          body: `Go to link : "${window.location.origin}/submitReport?id=${dateParam}"`
-        },
-        payload: {
-          title: `Update Docs for client ${customer}:`,
-          body: `Go to link : "${window.location.origin}/submitReport?id=${dateParam}"`,
-          cta: '',
-          img: ''
-        },
-        recipients: `eip155:80001:${doctor}`, // recipient address
-        channel: 'eip155:80001:0x2014d78892fC9fFBc1D26a6269069C59c50fD481', // your channel address
-        env: 'staging'
-      })
+      // await PushAPI.payloads.sendNotification({
+      //   signer: signer,
+      //   type: PushAPI.payloads.NOTIFICATION_TYPE.TARGETTED, // target
+      //   identityType: PushAPI.payloads.IDENTITY_TYPE.DIRECT_PAYLOAD, // direct payload
+      //   notification: {
+      //     title: `Update Docs for client ${customer}:`,
+      //     body: `Go to link : "${window.location.origin}/submitReport?id=${dateParam}"`
+      //   },
+      //   payload: {
+      //     title: `Update Docs for client ${customer}:`,
+      //     body: `Go to link : "${window.location.origin}/submitReport?id=${dateParam}"`,
+      //     cta: '',
+      //     img: ''
+      //   },
+      //   recipients: `eip155:80001:${doctor}`, // recipient address
+      //   channel: 'eip155:80001:0x2014d78892fC9fFBc1D26a6269069C59c50fD481', // your channel address
+      //   env: 'staging'
+      // })
     })
   })
 

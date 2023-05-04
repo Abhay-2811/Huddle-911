@@ -1,64 +1,41 @@
-import * as PushAPI from '@pushprotocol/restapi'
+// import * as PushAPI from '@pushprotocol/restapi'
 import { useState, useEffect } from 'react'
-import { NotificationItem, chainNameType } from "@pushprotocol/uiweb";
+// import { NotificationItem, chainNameType } from "@pushprotocol/uiweb";
 import './notification.css'
 import { ethers } from 'ethers';
 const Notifications = () => {
     
-    const [notif, setNotif] = useState();
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    // const [notif, setNotif] = useState();
+    // const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 
-    useEffect(()=>{
-        const getNotifications = async ()=>{
-            const signer =  provider.getSigner();
-            await signer.getAddress().then(async (res)=>{
-                const address = res;
-                console.log(res);
-                const CAIP = `eip155:80001:${address}`
-                const spams = await PushAPI.user.getFeeds({
-                    user: CAIP, // user address in CAIP
-                    env: 'staging'
-                  }).then((response)=>{
-                    setNotif(response);
-                    console.log(notif);
-                });
-            })
-            // console.log(address);
-            }
-        getNotifications();
-    },[])
+    // useEffect(()=>{
+    //     const getNotifications = async ()=>{
+    //         const signer =  provider.getSigner();
+    //         await signer.getAddress().then(async (res)=>{
+    //             const address = res;
+    //             console.log(res);
+    //             const CAIP = `eip155:80001:${address}`
+    //             const spams = await PushAPI.user.getFeeds({
+    //                 user: CAIP, // user address in CAIP
+    //                 env: 'staging'
+    //               }).then((response)=>{
+    //                 setNotif(response);
+    //                 console.log(notif);
+    //             });
+    //         })
+    //         // console.log(address);
+    //         }
+    //     getNotifications();
+    // },[])
   return(
     <div className='notif-container'>
         <h1>Notifications</h1><span>By - Push Protocol</span>
-        {notif?.map((oneNotification, i) => {
-    const { 
-        cta,
-        title,
-        message,
-        app,
-        icon,
-        image,
-        url,
-        blockchain,
-        notification
-    } = oneNotification;
-
-    return (
-        <NotificationItem
-            key={i} // any unique id
-            notificationTitle={title}
-            notificationBody={message}
-            cta={cta}
-            app={app}
-            icon={icon}
-            image={image}
-            url={url}
-            theme='dark'
-            chainName={blockchain}
-        />
-        );
-    })}
+        <h2>
+        They are supposed to be here : <br/>
+        - Doctors and clients getting meet link before meet <br/><span>(Can still be seen as they are sent through smart contract, just add <a href='https://chrome.google.com/webstore/detail/push-staging-protocol-alp/bjiennpmhdcandkpigcploafccldlakj'>Push Staging extension</a>)</span><br/> 
+        - Doctors getting link to update documents <br/><span>(This won't show up in push notifications as they were sne through backend)</span>
+        </h2>
     </div>
   )
 }

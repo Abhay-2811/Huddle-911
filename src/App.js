@@ -14,7 +14,7 @@ import Meet from './pages/Meet';
 import Notifications from './pages/Notifications';
 import SubmitReport from './pages/SubmitReport';
 function App() {
-  const { chains, provider } = configureChains([filecoinHyperspace,polygonMumbai,polygon,mainnet],[publicProvider()]);
+  const { chains, provider } = configureChains([polygonMumbai,polygon],[publicProvider()]);
   const { connectors } = getDefaultWallets({
     chains
   });

@@ -1,4 +1,4 @@
-const { useState, useEffect } = require('react')
+import { useState, useEffect } from 'react'
 import lighthouse from '@lighthouse-web3/sdk'
 import { useSearchParams } from 'react-router-dom'
 import { Polybase } from "@polybase/client";
